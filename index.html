@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" style="--primary: #f18a68; --primary2: #9d321f; --secondary: #ffd7c8; --background: #fff8f4; --card: #ffffff; --dark: #4a2418; --text: #56392f; --call: #e9785a; --wa: #20bd67; --location: #eaa13d; --share: #6e75e8; --gift1: #ff996f; --gift2: #ffcc75; --giftGlow: #fff2c5; --shadow: rgba(105,52,36,.18); --section-gap: 36px; --editable-font-family: Arial, Helvetica, sans-serif; --editable-heading-weight: 950; --editable-body-weight: 500; --editable-page-bg: #fff8f4; --editable-card-bg: #ffffff; --editable-primary: #f18a68; --editable-primary-dark: #9d321f; --editable-secondary: #ffd7c8; --editable-accent: #ffbf3f; --editable-dark: #4a2418; --editable-text: #56392f; --editable-border: #f1c8b9; --editable-shadow: rgba(105,52,36,.18); --editable-name: #e4482b; --editable-tagline: #159f91; --editable-subline: #5a4037; --editable-rating-bg: #f6c24f; --editable-rating-text: #24170e; --editable-rating-reviews: #ffffff; --editable-name-size: clamp(30px,6.5vw,55px); --editable-tagline-size: clamp(16px,3.4vw,27px); --editable-subline-size: clamp(13px,3vw,20px); --rating-radius: 999px; --rating-padding: 10px 18px; --rating-border: 1px solid rgba(255,255,255,.55); --rating-shadow: 0 8px 25px rgba(117,76,10,.25), inset 0 1px 0 rgba(255,255,255,.65); --rating-gradient: linear-gradient(135deg,#ffe08a 0%,#f4bd3f 48%,#d99616 100%); --rating-reviews-color: #ffffff; --rating-reviews-shadow: 0 2px 10px rgba(0,0,0,.45); --rating-star-color: #24170e; --banner-image-height: 45%; --banner-border-radius: 5% 5% 50% 50% / 5% 5% 18% 18%; --banner-clip-path: none; --offer-bg: #e53935; --offer-text-color: #ffffff; --offer-font: Arial; --offer-size: clamp(14px,3.6vw,20px); --offer-weight: 900; --offer-spacing: 0.5px; --offer-radius: 999px; --offer-speed: 5s;"><head>
 
 <!-- ONE-PLACE EDITABLE DESIGN / THEME -->
 <script>
@@ -8,9 +7,9 @@ window.SITE_EDIT = {
   "shopName": "Cell Point",
   "shopTagline": "Mobile & Electronics Shop",
   "shopSubline": "Best Quality   ★   Best Service   ★   Best Price",
-  "rating": "4.9",
+  "rating": "4.8",
   "ratingStars": "★",
-  "reviewCountText": "(880 Reviews)",
+  "reviewCountText": "(128 Reviews)",
   "fontFamily": "Arial, Helvetica, sans-serif",
   "headingFontWeight": "950",
   "bodyFontWeight": "500",
@@ -266,11 +265,11 @@ window.CARD = {
     "softwareHardware": "Software / Hardware"
   },
   "productLinks": {
-    "smartphone": "s.jpeg",
-    "earphone": "e.jpeg",
-    "charger": "ch.jpeg",
-    "powerBank": "p.jpeg",
-    "mobileCover": "c.jpeg"
+    "smartphone": "https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/s.jpeg",
+    "earphone": "https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/e.jpeg",
+    "charger": "https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/ch.jpeg",
+    "powerBank": "https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/p.jpeg",
+    "mobileCover": "https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/c.jpeg"
   },
   "giftImageLink": "https://raw.githubusercontent.com/googlewebpage/ANBOX-MOBILE---HINJAWADI2/main/download.jpeg?utm_source=chatgpt.com",
   "giftTitle": "Congratulations! You Win",
@@ -2846,6 +2845,27 @@ button,a{touch-action:manipulation}
 .hero{background:var(--background,#fff);}
 @media(max-width:650px){.hero-banner{height:70%;}}
 </style>
+<style id="banner-logo-auto-adjustment">
+/* ONLY requested banner/logo adjustment: content follows banner height automatically. */
+.hero-content{
+  top:calc(var(--banner-image-height,70%) - clamp(59px,9.5vw,74px)) !important;
+  bottom:auto !important;
+  left:20px;
+  right:20px;
+  transform:none !important;
+}
+.hero-banner{
+  height:var(--banner-image-height,70%) !important;
+  top:0 !important;
+  bottom:auto !important;
+}
+@media(max-width:760px){
+  .hero-content{top:calc(var(--banner-image-height,70%) - 59px) !important;bottom:auto !important;}
+}
+@media(max-width:430px){
+  .hero-content{top:calc(var(--banner-image-height,70%) - 59px) !important;bottom:auto !important;}
+}
+</style>
 
 <style id="premium-offer-slide">
 /* PREMIUM OFFER SLIDE — only the requested offer area */
@@ -3015,6 +3035,30 @@ button,a{touch-action:manipulation}
   .rating-reviews{font-size:11px !important;}
 }
 </style>
+<style id="final-responsive-banner-flow">
+/* FINAL BANNER-ONLY FLOW FIX: JS calculates the exact hero height from the
+   selected banner height and content. No other sections are restyled. */
+.hero{
+  overflow:visible !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+.hero-banner{
+  width:100% !important;
+  object-fit:cover !important;
+}
+.hero-content{
+  left:clamp(10px,4vw,24px) !important;
+  right:clamp(10px,4vw,24px) !important;
+  transform:none !important;
+}
+.logo-ring{
+  flex:0 0 auto !important;
+}
+@media(max-width:430px){
+  .hero-content{left:10px !important;right:10px !important;}
+}
+</style>
 
 </head>
 
@@ -3023,35 +3067,35 @@ button,a{touch-action:manipulation}
 <div class="page">
 
   <!-- Sticky header -->
-  <div class="mini-header" id="miniHeader">
-    <img class="mini-logo" id="miniLogo" alt="Logo" loading="lazy" decoding="async">
-    <div class="mini-name" id="miniName"></div>
+  <div class="mini-header show" id="miniHeader">
+    <img class="mini-logo" id="miniLogo" alt="Logo" loading="lazy" decoding="async" src="logo.png">
+    <div class="mini-name" id="miniName" style="font-family: Arial; font-size: 20px; font-weight: 950; color: rgb(74, 36, 24); letter-spacing: 0px;">Cell Point</div>
   </div>
 
   <!-- ========================================================
        HERO
        ======================================================== -->
-  <header class="hero">
+  <header class="hero" style="height: 552px !important; border-radius: 40px 40px 250px 250px; overflow: hidden;">
 
-    <img class="hero-banner" id="banner" alt="Banner" fetchpriority="high" decoding="async">
+    <img class="hero-banner" id="banner" alt="Banner" fetchpriority="high" decoding="async" src="banner.jpg" style="object-position: center 20%; height: 252px !important; top: 0px !important; bottom: auto !important;">
 
     <div class="hero-wave"></div>
     <div class="hero-wave2"></div>
 
-    <div class="hero-content">
+    <div class="hero-content" style="top: 178px !important; bottom: auto !important;">
       <div class="logo-ring">
-        <img class="hero-logo" id="heroLogo" alt="Shop Logo" fetchpriority="high" decoding="async">
+        <img class="hero-logo" id="heroLogo" alt="Shop Logo" fetchpriority="high" decoding="async" src="logo.png">
       </div>
 
-      <h1 class="shop-name" id="shopName"></h1>
-      <div class="shop-subtitle">Mobile &amp; Electronics Shop</div>
-      <div class="shop-subline" id="shopSubline"></div>
+      <h1 class="shop-name" id="shopName" style="font-family: Arial; font-size: clamp(30px, 6.5vw, 55px); font-weight: 950; color: rgb(228, 72, 43); letter-spacing: 0.4px;">Cell Point</h1>
+      <div class="shop-subtitle" style="font-family: Arial; font-size: clamp(16px, 3.4vw, 27px); font-weight: 900; color: rgb(21, 159, 145); letter-spacing: 0px;">Mobile &amp; Electronics Shop</div>
+      <div class="shop-subline" id="shopSubline" style="font-family: Arial; font-size: clamp(13px, 3vw, 20px); font-weight: 650; color: rgb(90, 64, 55); letter-spacing: 0.2px;">Best Quality   ★   Best Service   ★   Best Price</div>
 <div class="editable-rating-strip" id="editableRatingStrip">
   <span class="rating-badge">
-    <span id="ratingNumber">4.8</span>
-    <span id="ratingStars">★</span>
+    <span id="ratingNumber" style="font-family: Arial; font-size: clamp(18px, 4.5vw, 26px); font-weight: 900; color: rgb(43, 26, 11); letter-spacing: 0px;">4.8</span>
+    <span id="ratingStars" style="font-family: Arial; font-size: clamp(17px, 4vw, 23px); font-weight: 900; color: rgb(43, 26, 11); letter-spacing: 0px;">★</span>
   </span>
-  <span class="rating-reviews" id="ratingReviews">(128 Reviews)</span>
+  <span class="rating-reviews" id="ratingReviews" style="font-family: Arial; font-size: clamp(16px, 3.8vw, 24px); font-weight: 800; color: rgb(255, 255, 255); letter-spacing: 0px;">(128 Reviews)</span>
 </div>
 
     </div>
@@ -3074,35 +3118,35 @@ button,a{touch-action:manipulation}
        ======================================================== -->
   <section class="actions">
 
-    <a class="action call" id="callBtn" href="#">
+    <a class="action call" id="callBtn" href="tel:+919511090960" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <svg viewBox="0 0 24 24">
-        <path d="M6.6 3.5l2.1-.5 2 4.7-1.6 1.3c1 2.1 2.3 3.4 4.4 4.4l1.3-1.6 4.7 2-.5 2.1c-.3 1.2-1.4 2.1-2.7 2-7.3-.5-12.9-6.1-13.4-13.4-.1-1.3.8-2.4 2-2.7z"/>
+        <path d="M6.6 3.5l2.1-.5 2 4.7-1.6 1.3c1 2.1 2.3 3.4 4.4 4.4l1.3-1.6 4.7 2-.5 2.1c-.3 1.2-1.4 2.1-2.7 2-7.3-.5-12.9-6.1-13.4-13.4-.1-1.3.8-2.4 2-2.7z"></path>
       </svg>
       <span>Call</span>
     </a>
 
-    <a class="action whatsapp" id="whatsappBtn" href="#" target="_blank" rel="noopener">
+    <a class="action whatsapp" id="whatsappBtn" href="https://wa.me/919511090960" target="_blank" rel="noopener" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <svg viewBox="0 0 24 24">
-        <path d="M20 11.7a8.3 8.3 0 0 1-12.4 7.2L4 20l1.2-3.4A8.3 8.3 0 1 1 20 11.7z"/>
-        <path d="M8.4 7.9c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c.6 1.1 1.5 2 2.6 2.6l.7-.6c.2-.2.4-.2.6-.1l1.8.8c.3.1.4.3.4.5v.5c0 .3-.1.5-.4.7-.5.3-1.1.4-1.7.2-2.1-.6-4.8-3.3-5.4-5.4-.2-.6-.1-1.2.2-1.7z"/>
+        <path d="M20 11.7a8.3 8.3 0 0 1-12.4 7.2L4 20l1.2-3.4A8.3 8.3 0 1 1 20 11.7z"></path>
+        <path d="M8.4 7.9c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c.6 1.1 1.5 2 2.6 2.6l.7-.6c.2-.2.4-.2.6-.1l1.8.8c.3.1.4.3.4.5v.5c0 .3-.1.5-.4.7-.5.3-1.1.4-1.7.2-2.1-.6-4.8-3.3-5.4-5.4-.2-.6-.1-1.2.2-1.7z"></path>
       </svg>
       <span>WhatsApp</span>
     </a>
 
-    <a class="action location" id="locationBtn" href="#" target="_blank" rel="noopener">
+    <a class="action location" id="locationBtn" href="https://maps.app.goo.gl/nTfLiSaPsit85BCt7" target="_blank" rel="noopener" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <svg viewBox="0 0 24 24">
-        <path d="M20 10.5c0 5.2-8 10-8 10s-8-4.8-8-10a8 8 0 1 1 16 0z"/>
-        <circle cx="12" cy="10.5" r="2.5"/>
+        <path d="M20 10.5c0 5.2-8 10-8 10s-8-4.8-8-10a8 8 0 1 1 16 0z"></path>
+        <circle cx="12" cy="10.5" r="2.5"></circle>
       </svg>
       <span>Location</span>
     </a>
 
-    <button class="action share" id="shareBtn">
+    <button class="action share" id="shareBtn" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <svg viewBox="0 0 24 24">
-        <circle cx="18" cy="5" r="2.4"/>
-        <circle cx="6" cy="12" r="2.4"/>
-        <circle cx="18" cy="19" r="2.4"/>
-        <path d="M8.1 10.8l7.8-4.4M8.1 13.2l7.8 4.4"/>
+        <circle cx="18" cy="5" r="2.4"></circle>
+        <circle cx="6" cy="12" r="2.4"></circle>
+        <circle cx="18" cy="19" r="2.4"></circle>
+        <path d="M8.1 10.8l7.8-4.4M8.1 13.2l7.8 4.4"></path>
       </svg>
       <span>Share Card</span>
     </button>
@@ -3113,11 +3157,11 @@ button,a{touch-action:manipulation}
        ABOUT
        ======================================================== -->
   <section class="section">
-    <h2 class="section-title">About Us</h2>
+    <h2 class="section-title" style="font-family: Arial; font-size: clamp(23px, 5vw, 34px); font-weight: 900; color: rgb(74, 36, 24); letter-spacing: 0px;">About Us</h2>
 
     <div class="about">
-      <img class="about-image" id="aboutImage" alt="About Us" loading="lazy" decoding="async">
-      <div class="about-text" id="aboutText"></div>
+      <img class="about-image" id="aboutImage" alt="About Us" loading="lazy" decoding="async" src="a.jpg">
+      <div class="about-text" id="aboutText" style="font-family: Arial; font-size: 16px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">Welcome to our shop. We provide quality mobile phones, genuine accessories, reliable repair services and friendly customer support. Your satisfaction is our priority.</div>
     </div>
   </section>
 
@@ -3129,54 +3173,54 @@ button,a{touch-action:manipulation}
        SERVICES — only this section is replaced
        ======================================================== -->
   <section class="section">
-    <h2 class="section-title">Our Services</h2>
+    <h2 class="section-title" style="font-family: Arial; font-size: clamp(23px, 5vw, 34px); font-weight: 900; color: rgb(74, 36, 24); letter-spacing: 0px;">Our Services</h2>
 
     <div class="services">
 
-      <article class="service service-premium">
+      <article class="service service-premium" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
         <div class="service-icon service-icon-repair" aria-label="Mobile Repair">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="6" y="2.5" width="12" height="19" rx="2"/>
-            <path d="M9 5.5h6M10 18h4"/>
-            <path d="M4 11l-2 2 2 2M20 11l2 2-2 2"/>
-            <path d="M15.5 10.5l2 2-3.5 3.5-2-2z"/>
+            <rect x="6" y="2.5" width="12" height="19" rx="2"></rect>
+            <path d="M9 5.5h6M10 18h4"></path>
+            <path d="M4 11l-2 2 2 2M20 11l2 2-2 2"></path>
+            <path d="M15.5 10.5l2 2-3.5 3.5-2-2z"></path>
           </svg>
         </div>
         <h3 id="serviceNameRepair" class="service-title">Mobile Repair</h3>
-        <a class="wa-mini" id="serviceRepair" target="_blank" rel="noopener"><span class="wa-icon">●</span> Repair Now</a>
+        <a class="wa-mini" id="serviceRepair" target="_blank" rel="noopener" href="https://wa.me/919511090960?text=I%20want%20mobile%20repair" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;"><span class="wa-icon">●</span> Repair Now</a>
       </article>
 
-      <article class="service service-premium">
+      <article class="service service-premium" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
         <div class="service-icon service-icon-bill" aria-label="Generate Bill">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/>
-            <path d="M9 7h6M9 11h6M9 15h3"/>
-            <path d="M16.5 13.5l1 1 2-2"/>
+            <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path>
+            <path d="M9 7h6M9 11h6M9 15h3"></path>
+            <path d="M16.5 13.5l1 1 2-2"></path>
           </svg>
         </div>
-        <h3 class="service-title">Generate Bill</h3>
+        <h3 class="service-title">Digital Bill</h3>
         <button class="service-bill-btn" type="button" onclick="openCleanBill()">Generate Bill</button>
       </article>
 
-      <article class="service service-premium">
+      <article class="service service-premium" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
         <div class="service-icon service-icon-new" aria-label="New Mobile">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="6.5" y="2.5" width="11" height="19" rx="2"/>
-            <path d="M10 5h4M10 18h4"/>
-            <path d="M3 9h2M19 9h2"/>
-            <path d="M18 3v4M15.5 5h5"/>
+            <rect x="6.5" y="2.5" width="11" height="19" rx="2"></rect>
+            <path d="M10 5h4M10 18h4"></path>
+            <path d="M3 9h2M19 9h2"></path>
+            <path d="M18 3v4M15.5 5h5"></path>
           </svg>
         </div>
         <h3 id="serviceNameNewMobile" class="service-title">New Mobile</h3>
-        <a class="wa-mini" id="serviceNewMobile" target="_blank" rel="noopener"><span class="wa-icon">●</span> WhatsApp</a>
+        <a class="wa-mini" id="serviceNewMobile" target="_blank" rel="noopener" href="https://wa.me/919511090960?text=I%20want%20a%20new%20mobile" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;"><span class="wa-icon">●</span> WhatsApp</a>
       </article>
 
-      <article class="service service-premium">
+      <article class="service service-premium" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
         <div class="service-icon service-icon-emi" aria-label="EMI Calculator">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="16" rx="1.5"/>
-            <path d="M7 8h10M7 12h2M11 12h2M15 12h2M7 16h2M11 16h2M15 16h2"/>
-            <path d="M18 2v4M6 2v4"/>
+            <rect x="3" y="4" width="18" height="16" rx="1.5"></rect>
+            <path d="M7 8h10M7 12h2M11 12h2M15 12h2M7 16h2M11 16h2M15 16h2"></path>
+            <path d="M18 2v4M6 2v4"></path>
           </svg>
         </div>
         <h3 class="service-title">EMI Calculator</h3>
@@ -3288,38 +3332,38 @@ button,a{touch-action:manipulation}
       </label>
 
       <button class="premium-primary" type="button" onclick="calculateEMI()">Calculate EMI</button>
-      <div class="emi-result" id="emiResult" hidden></div>
+      <div class="emi-result" id="emiResult" hidden=""></div>
       <button class="premium-secondary" type="button" onclick="closePremiumModal('emiModal')">OK</button>
     </div>
   </div>
 
 <section class="section">
-    <h2 class="section-title">Popular Products</h2>
+    <h2 class="section-title" style="font-family: Arial; font-size: clamp(23px, 5vw, 34px); font-weight: 900; color: rgb(74, 36, 24); letter-spacing: 0px;">Popular Products</h2>
 
     <div class="products">
 
       <article class="product">
-        <img id="productSmartphone" alt="Smartphone" loading="lazy" decoding="async">
+        <img id="productSmartphone" alt="Smartphone" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/s.jpeg">
         <p>Smartphone</p>
       </article>
 
       <article class="product">
-        <img id="productEarphone" alt="Earphone" loading="lazy" decoding="async">
+        <img id="productEarphone" alt="Earphone" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/e.jpeg">
         <p>Earbuds</p>
       </article>
 
       <article class="product">
-        <img id="productCharger" alt="Charger" loading="lazy" decoding="async">
+        <img id="productCharger" alt="Charger" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/ch.jpeg">
         <p>Charger</p>
       </article>
 
       <article class="product">
-        <img id="productPowerBank" alt="Power Bank" loading="lazy" decoding="async">
+        <img id="productPowerBank" alt="Power Bank" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/p.jpeg">
         <p>Power Bank</p>
       </article>
 
       <article class="product">
-        <img id="productCover" alt="Mobile Cover" loading="lazy" decoding="async">
+        <img id="productCover" alt="Mobile Cover" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/ramyadav200924-lgtm/Dma/main/c.jpeg">
         <p>Mobile Cover</p>
       </article>
 
@@ -3335,11 +3379,11 @@ button,a{touch-action:manipulation}
 
       <div class="gift-icon-wrap">
         <svg viewBox="0 0 24 24">
-          <path d="M20 12v8H4v-8"/>
-          <path d="M3 8h18v4H3z"/>
-          <path d="M12 8v12"/>
-          <path d="M12 8H8.5A2.5 2.5 0 1 1 11 5.5C11 7 12 8 12 8z"/>
-          <path d="M12 8h3.5A2.5 2.5 0 1 0 13 5.5C13 7 12 8 12 8z"/>
+          <path d="M20 12v8H4v-8"></path>
+          <path d="M3 8h18v4H3z"></path>
+          <path d="M12 8v12"></path>
+          <path d="M12 8H8.5A2.5 2.5 0 1 1 11 5.5C11 7 12 8 12 8z"></path>
+          <path d="M12 8h3.5A2.5 2.5 0 1 0 13 5.5C13 7 12 8 12 8z"></path>
         </svg>
       </div>
 
@@ -3349,26 +3393,26 @@ button,a{touch-action:manipulation}
       <h2>Special Gift For You</h2>
       <p>Enter your phone amount and unlock your personalized surprise.</p>
 
-      <button class="gift-btn" id="openGiftBtn">View Gifts</button>
+      <button class="gift-btn" id="openGiftBtn" style="font-family: Arial; font-size: 16px; font-weight: 900; color: rgb(255, 255, 255); letter-spacing: 0px;">View Gifts</button>
 
     </div>
 
   </section>
 
   <section class="photo-gallery-section" id="photoGallerySection">
-  <h2 class="photo-gallery-heading">Photo Gallery</h2>
+  <h2 class="photo-gallery-heading" style="font-family: Arial; font-size: clamp(23px, 5vw, 34px); font-weight: 900; color: rgb(74, 36, 24); letter-spacing: 0px;">Photo Gallery</h2>
   <div class="photo-gallery-grid">
-    <a class="photo-gallery-card" id="photoGalleryCard1" href="javascript:void(0)" aria-label="Gallery photo 1">
-      <img id="photoGalleryImage1" src="https://example.com/photo1.jpg" alt="Gallery Photo 1" loading="lazy">
+    <a class="photo-gallery-card" id="photoGalleryCard1" href="p1.jpg" aria-label="Gallery photo 1">
+      <img id="photoGalleryImage1" src="p1.jpg" alt="Gallery Photo 1" loading="lazy">
     </a>
-    <a class="photo-gallery-card" id="photoGalleryCard2" href="javascript:void(0)" aria-label="Gallery photo 2">
-      <img id="photoGalleryImage2" src="https://example.com/photo2.jpg" alt="Gallery Photo 2" loading="lazy">
+    <a class="photo-gallery-card" id="photoGalleryCard2" href="p2.jpg" aria-label="Gallery photo 2">
+      <img id="photoGalleryImage2" src="p2.jpg" alt="Gallery Photo 2" loading="lazy">
     </a>
-    <a class="photo-gallery-card" id="photoGalleryCard3" href="javascript:void(0)" aria-label="Gallery photo 3">
-      <img id="photoGalleryImage3" src="https://example.com/photo3.jpg" alt="Gallery Photo 3" loading="lazy">
+    <a class="photo-gallery-card" id="photoGalleryCard3" href="p3.jpg" aria-label="Gallery photo 3">
+      <img id="photoGalleryImage3" src="p3.jpg" alt="Gallery Photo 3" loading="lazy">
     </a>
   </div>
-  <a class="view-all-photos" id="viewAllPhotosButton" href="https://example.com/all-photos">View All Photos</a>
+  <a class="view-all-photos" id="viewAllPhotosButton" href="https://maps.app.goo.gl/B4BK29LLM9wSUFaM8">View All Photos</a>
 </section>
 
 <script>
@@ -3395,26 +3439,26 @@ button,a{touch-action:manipulation}
        REVIEWS
        ======================================================== -->
   <section class="section">
-    <h2 class="section-title">Customer Reviews</h2>
+    <h2 class="section-title" style="font-family: Arial; font-size: clamp(23px, 5vw, 34px); font-weight: 900; color: rgb(74, 36, 24); letter-spacing: 0px;">Customer Reviews</h2>
 
     <div class="reviews">
 
       <article class="review">
         <div class="stars">★★★★★</div>
-        <div class="review-name" id="review1Name"></div>
-        <p class="review-text" id="review1Text"></p>
+        <div class="review-name" id="review1Name" style="font-family: Arial; font-size: 16px; font-weight: 850; color: rgb(74, 36, 24); letter-spacing: 0px;">Priyanshu chaturvedi</div>
+        <p class="review-text" id="review1Text" style="font-family: Arial; font-size: 14px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">Cell point is the best place for purchasing electronic products. I am really happy with the product and by their services</p>
       </article>
 
       <article class="review">
         <div class="stars">★★★★★</div>
-        <div class="review-name" id="review2Name"></div>
-        <p class="review-text" id="review2Text"></p>
+        <div class="review-name" id="review2Name" style="font-family: Arial; font-size: 16px; font-weight: 850; color: rgb(74, 36, 24); letter-spacing: 0px;">Amit</div>
+        <p class="review-text" id="review2Text" style="font-family: Arial; font-size: 14px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">Good quality accessories and fast mobile service. Highly recommended.</p>
       </article>
 
     </div>
 
     <div class="center" style="margin-top:20px">
-      <a class="primary-btn" id="allReviewsBtn" target="_blank" rel="noopener">View All Reviews</a>
+      <a class="primary-btn" id="allReviewsBtn" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Cell+Point+The+Mobile+Shop/@19.1114188,72.8603338,16z/data=!4m24!1m15!4m14!1m6!1m2!1s0x3be7a945afad18fb:0x5c6346b504c7b4!2sNalasopara+Station+Rd,+Nala+Sopara,+Nalasopara+East,+Vasai-Virar,+Maharashtra!2m2!1d72.8208183!2d19.4096533!1m6!1m2!1s0x3be7b7f90c19e3ed:0xe2d2cdc7bf634b8a!2sCell+Point+The+Mobile+Shop,+Shop+no+6,+GREENLAND+APARTMENT,+B+WING,+Shaheed+Bhagat+Singh+Society,+S+B+Singh+Colony,+J+B+Nagar,+Andheri+(E,+Mumbai,+Maharashtra+400059!2m2!1d72.8669773!2d19.11142!3m7!1s0x3be7b7f90c19e3ed:0xe2d2cdc7bf634b8a!8m2!3d19.11142!4d72.8669773!9m1!1b1!16s%2Fg%2F11qngfjn1x?entry=ttu&amp;g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">View All Reviews</a>
     </div>
   </section>
 
@@ -3425,36 +3469,36 @@ button,a{touch-action:manipulation}
 
     <div class="info-grid">
 
-      <div class="info">
+      <div class="info" style="font-family: Arial; font-size: 15px; font-weight: 600; color: rgb(86, 57, 47); letter-spacing: 0px;">
         <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M12 7v5l3 2"/>
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 7v5l3 2"></path>
         </svg>
         <strong>Opening Time</strong>
-        <small id="openingTime"></small>
+        <small id="openingTime">10:00 AM – 9:00 PM</small>
       </div>
 
-      <div class="info">
+      <div class="info" style="font-family: Arial; font-size: 15px; font-weight: 600; color: rgb(86, 57, 47); letter-spacing: 0px;">
         <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M8 12l2.5 2.5L16 9"/>
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M8 12l2.5 2.5L16 9"></path>
         </svg>
         <strong>Open All Days</strong>
-        <small id="openAllDay"></small>
+        <small id="openAllDay">Open All Days</small>
       </div>
 
-      <a class="info" id="shopLocationInfo" target="_blank" rel="noopener">
+      <a class="info" id="shopLocationInfo" target="_blank" rel="noopener" href="https://maps.app.goo.gl/nTfLiSaPsit85BCt7" style="font-family: Arial; font-size: 15px; font-weight: 600; color: rgb(86, 57, 47); letter-spacing: 0px;">
         <svg viewBox="0 0 24 24">
-          <path d="M20 10.5c0 5.2-8 10-8 10s-8-4.8-8-10a8 8 0 1 1 16 0z"/>
-          <circle cx="12" cy="10.5" r="2.5"/>
+          <path d="M20 10.5c0 5.2-8 10-8 10s-8-4.8-8-10a8 8 0 1 1 16 0z"></path>
+          <circle cx="12" cy="10.5" r="2.5"></circle>
         </svg>
         <strong>Shop Location</strong>
-        <small id="locationText"></small>
+        <small id="locationText">Your Shop Location</small>
       </a>
 
-      <div class="info">
+      <div class="info" style="font-family: Arial; font-size: 15px; font-weight: 600; color: rgb(86, 57, 47); letter-spacing: 0px;">
         <svg viewBox="0 0 24 24">
-          <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/>
+          <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"></path>
         </svg>
         <strong id="trustTitle">Trusted Shop</strong>
         <small id="trustText">Quality • Service • Trust</small>
@@ -3467,10 +3511,10 @@ button,a{touch-action:manipulation}
   <!-- ========================================================
        SAVE CONTACT
        ======================================================== -->
-  <section class="save-box">
+  <section class="save-box" style="font-family: Arial; font-size: 16px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">
     <h2>Save Contact</h2>
     <p>Save our shop number directly to your phone.</p>
-    <button class="save-btn" id="saveContactBtn">
+    <button class="save-btn" id="saveContactBtn" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <span>＋</span> Save to Phone
     </button>
   </section>
@@ -3486,51 +3530,51 @@ button,a{touch-action:manipulation}
        ======================================================== -->
   <section class="social">
 
-    <h2 class="section-title">Follow Us</h2>
+    <h2 class="section-title" style="font-family: Arial; font-size: clamp(23px, 5vw, 34px); font-weight: 900; color: rgb(74, 36, 24); letter-spacing: 0px;">Follow Us</h2>
 
     <div class="social-buttons">
-      <button class="social-btn youtube" id="youtubeBtn">▶ YouTube</button>
-      <button class="social-btn instagram" id="instagramBtn">◎ Instagram</button>
-      <button class="social-btn facebook" id="facebookBtn">f Facebook</button>
+      <button class="social-btn youtube" id="youtubeBtn" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">▶ YouTube</button>
+      <button class="social-btn instagram" id="instagramBtn" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">◎ Instagram</button>
+      <button class="social-btn facebook" id="facebookBtn" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">f Facebook</button>
     </div>
 
   </section>
 
-  <footer class="footer">
-    Digital Business Card <span id="devDot" title="">•</span> <span id="footerName"></span>
+  <footer class="footer" style="font-family: Arial; font-size: 16px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">
+    Digital Business Card <span id="devDot" title="">•</span> <span id="footerName">Cell Point</span>
   </footer>
 </div>
 
 <!-- ============================================================
      WELCOME POPUP
      ============================================================ -->
-<div class="modal open" id="greetingModal">
+<div class="modal" id="greetingModal">
 
   <div class="modal-card">
 
-    <div class="modal-head">
+    <div class="modal-head" style="font-family: Arial; font-size: 24px; font-weight: 900; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <h3>Greetings</h3>
       <button class="close" data-close="greetingModal">×</button>
     </div>
 
-    <div class="modal-body greeting">
+    <div class="modal-body greeting" style="font-family: Arial; font-size: 16px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">
 
       <div class="greeting-graphic">
         <div class="halo"></div>
-        <img class="greeting-logo" id="greetingLogo" alt="Logo">
+        <img class="greeting-logo" id="greetingLogo" alt="Logo" src="logo.png">
         <span class="spark s1">✦</span>
         <span class="spark s2">✧</span>
         <span class="spark s3">✦</span>
         <span class="spark s4">✧</span>
       </div>
 
-      <div class="greeting-welcome" id="greetingTitle"></div>
-      <div class="greeting-name" id="greetingName"></div>
+      <div class="greeting-welcome" id="greetingTitle" style="font-family: Arial; font-size: clamp(24px, 6vw, 38px); font-weight: 950; color: rgb(74, 36, 24); letter-spacing: 0px;">Welcome</div>
+      <div class="greeting-name" id="greetingName" style="font-family: Arial; font-size: clamp(24px, 6vw, 38px); font-weight: 950; color: rgb(74, 36, 24); letter-spacing: 0px;">Cell Point</div>
       <div class="greeting-divider"></div>
 
-      <p id="greetingText"></p>
+      <p id="greetingText">Welcome to our digital business card. We are happy to serve you.</p>
 
-      <button class="primary-btn" data-close="greetingModal">Okay</button>
+      <button class="primary-btn" data-close="greetingModal" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">Okay</button>
 
     </div>
 
@@ -3545,16 +3589,16 @@ button,a{touch-action:manipulation}
 
   <div class="modal-card">
 
-    <div class="modal-head">
+    <div class="modal-head" style="font-family: Arial; font-size: 24px; font-weight: 900; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <h3>Follow Us</h3>
       <button class="close" data-close="socialModal">×</button>
     </div>
 
-    <div class="modal-body">
+    <div class="modal-body" style="font-family: Arial; font-size: 16px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">
 
-      <button class="social-modal-btn youtube" id="modalYoutube">▶ YouTube</button>
-      <button class="social-modal-btn instagram" id="modalInstagram">◎ Instagram</button>
-      <button class="social-modal-btn facebook" id="modalFacebook">f Facebook</button>
+      <button class="social-modal-btn youtube" id="modalYoutube" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">▶ YouTube</button>
+      <button class="social-modal-btn instagram" id="modalInstagram" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">◎ Instagram</button>
+      <button class="social-modal-btn facebook" id="modalFacebook" style="font-family: Arial; font-size: 15px; font-weight: 850; color: rgb(255, 255, 255); letter-spacing: 0px;">f Facebook</button>
 
     </div>
 
@@ -3569,43 +3613,37 @@ button,a{touch-action:manipulation}
 
   <div class="modal-card">
 
-    <div class="modal-head">
+    <div class="modal-head" style="font-family: Arial; font-size: 24px; font-weight: 900; color: rgb(255, 255, 255); letter-spacing: 0px;">
       <h3>Special Gift</h3>
       <button class="close" data-close="giftModal">×</button>
     </div>
 
-    <div class="modal-body gift-modal-body">
+    <div class="modal-body gift-modal-body" style="font-family: Arial; font-size: 16px; font-weight: 500; color: rgb(86, 57, 47); letter-spacing: 0px;">
 
       <div id="giftForm" class="gift-entry-premium">
 
         <div class="gift-premium-top">
           <div class="gift-crown">🎁</div>
-          <span class="gift-kicker" id="giftKicker"></span>
-          <div class="gift-modal-title">
-            <span id="giftEntryTitle"></span>
+          <span class="gift-kicker" id="giftKicker" style="font-family: Arial; font-size: clamp(24px, 6vw, 38px); font-weight: 950; color: rgb(74, 36, 24); letter-spacing: 0px;">Exclusive Gift</span>
+          <div class="gift-modal-title" style="font-family: Arial; font-size: clamp(24px, 6vw, 38px); font-weight: 950; color: rgb(74, 36, 24); letter-spacing: 0px;">
+            <span id="giftEntryTitle">Unlock Your Gift</span>
           </div>
         </div>
 
         <div class="gift-entry-box">
 
           <div class="gift-entry-label">
-            <span id="giftEntryLabel"></span>
-            <small id="giftEntryHint"></small>
+            <span id="giftEntryLabel">Enter price your phone amount</span>
+            <small id="giftEntryHint">Enter the amount of your phone to reveal your surprise.</small>
           </div>
 
           <div class="gift-input-wrap">
             <span class="gift-currency">₹</span>
-            <input
-              id="phoneAmount"
-              type="number"
-              min="0"
-              inputmode="numeric"
-              placeholder="Enter phone price"
-            >
+            <input id="phoneAmount" type="number" min="0" inputmode="numeric" placeholder="Enter phone price">
           </div>
 
           <button class="gift-reveal-btn" id="getGiftBtn">
-            <span id="giftRevealText"></span>
+            <span id="giftRevealText">✦ Reveal My Gift ✦</span>
           </button>
 
         </div>
@@ -3630,14 +3668,14 @@ button,a{touch-action:manipulation}
 
           <div class="gift-celebrate">
 
-            <div class="gift-celebrate-kicker" id="giftCelebrateKicker"></div>
+            <div class="gift-celebrate-kicker" id="giftCelebrateKicker">✦ YOUR SURPRISE IS HERE ✦</div>
 
             <div class="gift-win-title" id="giftCongrats"></div>
 
             <p id="giftDescription"></p>
 
             <button class="gift-thanks-btn" id="thanksBtn">
-              <span id="giftThanksText"></span>
+              <span id="giftThanksText">Thanks</span>
             </button>
 
           </div>
@@ -4182,6 +4220,71 @@ button,a{touch-action:manipulation}
     const hero=document.querySelector(".hero");
     if(hero){
       hero.classList.toggle("banner-shine-off",String(E.bannerShine||"on").toLowerCase()==="off");
+    }
+
+    /* Responsive banner/logo flow: the banner height controls the whole
+       hero height, so logo + text + rating + every section below it move
+       together automatically on every screen size. */
+    function syncBannerLayout(){
+      const h=document.querySelector(".hero");
+      const bc=document.querySelector(".hero-content");
+      const b=document.querySelector(".hero-banner");
+      const lr=document.querySelector(".logo-ring");
+      if(!h||!bc||!b||!lr) return;
+
+      const vw=window.innerWidth||document.documentElement.clientWidth||400;
+      let baseHero;
+      if(vw<=380) baseHero=400;
+      else if(vw<=600) baseHero=Math.max(390,Math.min(520,vw*1.05));
+      else if(vw<=760) baseHero=460;
+      else baseHero=Math.min(560,vw*0.62);
+      if(vw>760) baseHero=Math.max(475,baseHero);
+
+      const raw=String(E.bannerImageHeight||"70%").trim();
+      let bannerPx;
+      if(/%$/.test(raw)){
+        bannerPx=baseHero*(parseFloat(raw)/100);
+      }else if(/px$/.test(raw)){
+        bannerPx=parseFloat(raw);
+      }else if(/^\d+(?:\.\d+)?$/.test(raw)){
+        bannerPx=parseFloat(raw);
+      }else{
+        const probe=document.createElement("div");
+        probe.style.cssText="position:absolute;visibility:hidden;height:"+raw+";width:0";
+        document.body.appendChild(probe);
+        bannerPx=probe.getBoundingClientRect().height||baseHero*.7;
+        probe.remove();
+      }
+      bannerPx=Math.max(80,Math.min(baseHero*1.35,bannerPx));
+
+      const logoSize=Math.round(lr.getBoundingClientRect().width||((vw<=430)?118:148));
+      const contentTop=Math.max(12,bannerPx-(logoSize/2));
+      const bottomGap=Math.max(18,Math.min(34,vw*.05));
+
+      b.style.setProperty("height",bannerPx+"px","important");
+      b.style.setProperty("top","0px","important");
+      b.style.setProperty("bottom","auto","important");
+      bc.style.setProperty("top",contentTop+"px","important");
+      bc.style.setProperty("bottom","auto","important");
+
+      /* Wait one frame so wrapped text has its final height, then size the
+         hero to exactly contain the logo, header text and rating. */
+      requestAnimationFrame(()=>{
+        const contentBottom=bc.getBoundingClientRect().height+contentTop;
+        const heroHeight=Math.max(baseHero*.45,contentBottom+bottomGap);
+        h.style.setProperty("height",Math.ceil(heroHeight)+"px","important");
+      });
+    }
+    syncBannerLayout();
+    window.__syncBannerLayout=syncBannerLayout;
+    if(!window.__bannerLayoutResizeBound){
+      window.__bannerLayoutResizeBound=true;
+      window.addEventListener("resize",()=>{
+        clearTimeout(window.__bannerLayoutResizeTimer);
+        window.__bannerLayoutResizeTimer=setTimeout(()=>window.__syncBannerLayout&&window.__syncBannerLayout(),80);
+      },{passive:true});
+      window.addEventListener("orientationchange",()=>setTimeout(()=>window.__syncBannerLayout&&window.__syncBannerLayout(),120),{passive:true});
+      if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>window.__syncBannerLayout&&window.__syncBannerLayout());
     }
 
     /* Offer slide — responsive and fully developer-editable */
@@ -5924,7 +6027,4 @@ module.exports = QRCode;
   });
 })();
 </script>
-
-
-</body>
-</html>
+</body></html>
